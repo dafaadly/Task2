@@ -1,0 +1,13 @@
+- Tag element yang akan di pakai ?
+- Block element dan inline element ?
+- Semantic dan non Semantic 
+- Atribut adalah informasi atau properti tambahan suatu tag atau elemen HTML.
+
+<h1>Personal Web 1</h1>
+    <p style="color: red">Personal Web</p>
+    <!-- <a href="https://dumbways.id/dashboard/student">dumbways.id</a> -->
+
+    <!-- inline elements dan block elements -->
+    <span style="background-color: yellow">hallo</span>
+
+    <span style="background-color: red">test</span>
