@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #abb2b9;
+  font-family: sans-serif;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #eaecee;
+  align-items: center;
+}
+
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.dashboard ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.dashboard img {
+  margin-right: 40px;
+  width: 60px;
+}
+
+.dashboard a {
+  color: black;
+  text-decoration: none;
+}
+
+.dashboard ul li {
+  list-style-type: none;
+  margin-right: 25px;
+  font-size: 20px;
+}
+
+.home a {
+  font-weight: bold;
+  color: black;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.contact a {
+  text-decoration: none;
+  background-color: black;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Form */
+
+h1 {
+  text-align: center;
+}
+
+form {
+  width: 500px;
+  margin: 50px auto;
+}
+
+.date-container {
+  display: flex;
+}
+
+textarea {
+  resize: none;
+}
+
+.container-form {
+  width: 100%;
+}
+
+.top input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  margin-top: 5px;
+}
+
+.date-container input {
+  width: 160px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  margin-top: 5px;
+}
+
+.left-date {
+  width: 500px;
+  padding-top: 10px;
+  margin-right: 10px;
+}
+
+.right-date {
+  width: 500px;
+  padding-top: 10px;
+}
+
+.left-date input {
+  width: 90%;
+}
+
+.right-date input {
+  width: 100%;
+}
+
+.deskripsi {
+  padding-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  margin-top: 5px;
+}
+
+.teknologi {
+  padding-top: 10px;
+}
+
+.checkbox-container {
+  margin-top: 20px;
+}
+
+.left-checkbox label {
+  padding-right: 100px;
+}
+
+.right-checkbox label {
+  padding-right: 96px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.upload-image {
+  padding-top: 10px;
+}
+
+.container-pilihan {
+  display: flex;
+}
+.image-file {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  background-color: white;
+  margin-top: 5px;
+}
+
+.image-file input {
+  margin-left: 185px;
+}
+
+.pilihan {
+  background-color: #abb2b9;
+}
+
+span {
+  background-color: #abb2b9;
+  width: 100%;
+}
+
+.submit-main button {
+  background-color: black;
+  padding: 5px 25px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer; /* pake ini untuk button*/
+}
+
+.submit-main {
+  display: flex;
+  justify-content: end;
+  width: 520px;
+  margin-top: 50px;
+}
+
+/* Halaman Blog List */
+
+.container-blog {
+  background-color: white;
+  width: 100%;
+}
+
+#contents {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.halaman {
+  margin: 50px;
+  padding: 40px;
+  display: flex;
+  gap: 50px;
+  border-radius: 8px;
+  box-shadow: 0 10px 10px rgba(132, 132, 132, 0.503);
+  flex: 1; 
+}
+
+.card {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(132, 132, 132, 0.4);
+  border-radius: 8px;
+  padding-bottom: 50px;
+  flex: 1;
+}
+
+.body-card {
+  text-align: center;
+  margin-top: -50px;
+}
+
+.card img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.halaman p {
+  text-align: justify;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* font-size: 1.1em; */
+}
+
+.halaman h2 {
+  padding-top: 50px;
+  font-size: 2.5em;
+}
+
+.contact2 {
+  display: flex;
+}
+
+.contact2 a {
+  text-decoration: none;
+  color: black;
+}
+
+.contact2 h3 {
+  border: 2px black solid;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.cv {
+  padding-left: 30px;
+  padding-top: 12px;
+}
+
+.cv a {
+  text-decoration: none;
+  color: black;
+}
+
+.icon {
+  margin-top: 20px;
+}
+
+.icon img {
+  border: 3px black solid;
+  background-color: black;
+  border-radius: 17px;
+  margin-right: 10px;
+}
+
+.section-left {
+ width: 50%;
+}
+
+.section-right {
+  flex: 1;
+}

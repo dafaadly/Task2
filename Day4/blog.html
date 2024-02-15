@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/blog.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-main">
+        <div class="dashboard">
+          <ul>
+            <a href="web.html">
+              <img src="./assets/images/logo.png" alt="logo-image" />
+            </a>
+
+            <li class="home">
+              <a href="./task2.html">Home</a>
+            </li>
+            <li>
+              <a href="blog.html">My Project</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact">
+          <a href="contact.html">Contact Me</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Form Project -->
+
+    <div>
+      <h1>ADD MY PROJECT</h1>
+      <div>
+        <form onsubmit="addBlog(event)" action="">
+          <div class="top">
+            <label for=""> Project Name </label>
+            <input type="text" id="project-name" />
+          </div>
+
+          <div class="date-container">
+            <div class="left-date">
+              <label for=""> Start Date </label>
+              <input type="date" id="start-date" />
+            </div>
+
+            <div class="right-date">
+              <label for=""> End Date </label>
+              <input type="date" id="end-date" />
+            </div>
+          </div>
+
+          <div class="deskripsi">
+            <label for=""> Description </label>
+            <textarea name="" id="deskripsi" cols="30" rows="10"></textarea>
+          </div>
+
+          <div class="teknologi">
+            <label for=""> Technologies </label>
+
+            <div class="checkbox-container">
+              <div class="left-checkbox">
+                <div>
+                  <label for="">
+                    <input type="checkbox" id="node-js" /> Node Js</label
+                  >
+                  <label for="">
+                    <input type="checkbox" id="next-js" /> Next Js</label
+                  >
+                </div>
+              </div>
+
+              <div class="right-checkbox">
+                <div>
+                  <label for="">
+                    <input type="checkbox" id="react-js" /> React Js</label
+                  >
+                  <label for="">
+                    <input type="checkbox" id="type-script" /> TypeScript</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="upload-image">
+            <label for="">Upload Image</label>
+
+            <div class="image-file">
+              <span class="pilihan"> choose</span>
+
+              <input type="file" id="image-upload" />
+            </div>
+          </div>
+
+          <div class="submit-main">
+            <button>Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- blog -->
+
+      <div class="container-blog">
+        <h1>My Project</h1>
+
+        <div id="contents">
+          <!-- dynamic content would be here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/blog.js"></script>
+  </body>
+</html>
