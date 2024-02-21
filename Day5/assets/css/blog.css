@@ -139,25 +139,33 @@ textarea {
   margin-top: 5px;
 }
 
+/* Form Check Box */
+
 .teknologi {
   padding-top: 10px;
 }
 
 .checkbox-container {
-  margin-top: 20px;
+  margin: 10px;
 }
 
-.left-checkbox label {
-  padding-right: 100px;
+.left-checkbox {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
 }
 
-.right-checkbox label {
-  padding-right: 96px;
+.right-checkbox  {
+  display: flex;
+  margin-left: 30px;
+  justify-content: center;
 }
 
 label {
   font-weight: bold;
 }
+
+/* Form Upload */
 
 .upload-image {
   margin-top: 20px;
@@ -179,7 +187,6 @@ label {
 .image-file input {
   margin-left: 150px;
 }
-
 
 .submit-main button {
   background-color: black;

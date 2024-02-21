@@ -9,9 +9,11 @@ function addBlog(event) {
   let deskripsi = document.getElementById("deskripsi").value;
   let uploadImage = document.getElementById("image-upload").value;
   let nodeJs = document.getElementById("node-js").checked;
-  let nextJs = document.getElementById("next-js").checked;
+  let vueJs = document.getElementById("vue-js").checked;
   let reactJs = document.getElementById("react-js").checked;
   let typeScript = document.getElementById("type-script").checked;
+
+  let postAt = new Date();
 
   let dataBlog = {
     projectName,
@@ -20,9 +22,10 @@ function addBlog(event) {
     deskripsi,
     uploadImage,
     nodeJs,
-    nextJs,
+    vueJs,
     reactJs,
     typeScript,
+    postAt,
   };
 
   console.log(dataBlog);
@@ -36,6 +39,14 @@ function renderBlog() {
   document.getElementById("contents").innerHTML = "";
 
   for (let index = 0; index < dataBlogs.length; index++) {
+    // let techIcon = "";
+
+    // if (dataBlogs[index].nodeJs) {
+    //   techIcon =  `<i class="fab fa-node-js"></i>`
+    // };
+
+    // console.log(techIcon);
+
     document.getElementById("contents").innerHTML += `
     <div class="blog-detail">
             <div class="detail">
@@ -45,7 +56,8 @@ function renderBlog() {
                 <a href="web.html">
                   <h3>${dataBlogs[index].projectName}</h3>
                 </a>
-                  <p>durasi: ${dataBlogs[index].startDate} - ${dataBlogs[index].endDate}
+                  <p> ${getBaseDate(dataBlogs[index].postAt)} WIB </p>
+
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Tempore quibusdam nesciunt, itaque quas minus perferendis
@@ -53,6 +65,12 @@ function renderBlog() {
                     Necessitatibus porro dolorum itaque velit distinctio?
                     Fugiat, quaerat.
                   </p>
+                </div>
+
+                <div style="float:right">
+                    <p style="color:grey;">${getDistanceTime(
+                      dataBlogs[index].postAt
+                    )}</p>
                 </div>
 
                 <div class="container-icon">
@@ -79,5 +97,62 @@ function renderBlog() {
 
           </div>
     `;
+  }
+}
+
+function getBaseDate(time) {
+  const monthNames = [
+    "Januari",
+    "Februari",
+    "Maret",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Agustus",
+    "September",
+    "Oktober",
+    "November",
+    "Desember",
+  ];
+
+  const year = time.getFullYear();
+  const month = time.getMonth();
+  const date = time.getDate();
+
+  const hour = time.getHours();
+  const minute = time.getMinutes();
+
+  return `${date} ${monthNames[month]} ${year} - ${hour} : ${minute}`;
+}
+
+function getDistanceTime(time) {
+  let timeNow = new Date();
+  let timePost = time;
+  let distanceTime = timeNow - timePost;
+
+  console.log(distanceTime);
+
+  let milisecond = 1000; //detik
+  let secondHour = 3600; //1 jam - 3600 detik
+  let hourInDay = 24; //1 hari = 24 jam
+
+  let distanceDay = Math.floor(
+    distanceTime / (milisecond * secondHour * hourInDay)
+  );
+  let distanceHour = Math.floor(distanceTime / (milisecond * secondHour));
+  let distanceMinute = Math.floor(distanceTime / (milisecond * 60));
+  let distanceSecond = Math.floor(distanceTime / milisecond);
+
+  console.log(distanceDay, distanceHour, distanceMinute, distanceSecond);
+
+  if (distanceDay > 0) {
+    return `${distanceDay} day ago`;
+  } else if (distanceHour > 0) {
+    return `${distanceHour} hours ago`;
+  } else if (distanceMinute > 0) {
+    return `${distanceMinute} minutes ago`;
+  } else if (distanceSecond >= 0) {
+    return `${distanceSecond} seconds ago`;
   }
 }
