@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav>
+      <div class="nav-main">
+        <div class="dashboard">
+          <ul>
+            <a href="web.html">
+              <img src="./assets/images/logo.png" alt="logo-image" />
+            </a>
+
+            <li class="collapse-item">
+              <a href="./task2.html">Home</a>
+            </li>
+            <li class="collapse-item">
+              <a href="blog.html">My Project</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact">
+          <a href="contact.html">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hamburger">
+        <button
+          style="background-color: transparent; border: none; cursor: pointer"
+          onclick="openHamburger()"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="hamburger-list" id="hamburger-list">
+      <div>
+        <div>
+          <a href="./task2.html">Home</a>
+        </div>
+        <div>
+          <a href="blog.html">My Project</a>
+        </div>
+        <div>
+          <a href="contact.html">Contact Me</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+
+    <div class="kontak">
+      <h1>GET IN TOUCH</h1>
+      <form>
+        <div>
+          <label>Name</label>
+          <input type="text" id="name" />
+        </div>
+
+        <div>
+          <label>Email</label>
+          <input type="email" id="email" />
+        </div>
+
+        <div>
+          <label>Phone Number</label>
+          <input type="text" id="phone" />
+        </div>
+
+        <div>
+          <label>Subject</label>
+          <select id="subject">
+            <option hidden></option>
+            <option>Frontend Developer</option>
+            <option>Backend Developer</option>
+            <option>Fullstack Developer</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Your Message</label>
+          <textarea id="message"></textarea>
+        </div>
+
+        <div class="submit-main">
+          <button type="button" onclick="getData()">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/hamburger.js"></script>
+  </body>
+</html>
