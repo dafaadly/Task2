@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  background-color: #abb2b9;
+  font-family: sans-serif;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #eaecee;
+  align-items: center;
+}
+
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.dashboard ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.dashboard img {
+  margin-right: 40px;
+  width: 60px;
+}
+
+.dashboard a {
+  color: black;
+  text-decoration: none;
+}
+
+.dashboard ul li {
+  list-style-type: none;
+  margin-right: 25px;
+  font-size: 20px;
+}
+
+.home a {
+  font-weight: bold;
+  color: black;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.contact a {
+  text-decoration: none;
+  background-color: black;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Web */
+
+.web {
+  margin: 100px;
+}
+
+.web h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: -40px;
+}
+
+.web p {
+  text-align: justify;
+}
+
+.container {
+  display: flex;
+}
+
+.left-image img {
+  width: 750px;
+}
+
+.right-content {
+  padding-left: 50px;
+  margin-top: -27px;
+}
+
+.right-icon {
+  display: flex;
+  padding-top: -10px;
+}
+
+.right-icon p {
+  padding-right: 50px;
+}
+
+.durasi img {
+  padding-top: -50px;
+}

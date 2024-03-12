@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/testimonial.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav>
+      <div class="nav-main">
+        <div class="dashboard">
+          <ul>
+            <a href="web.html">
+              <img src="./assets/images/logo.png" alt="logo-image" />
+            </a>
+
+            <li class="collapse-item">
+              <a href="./task2.html">Home</a>
+            </li>
+            <li class="collapse-item">
+              <a href="blog.html">My Project</a>
+            </li>
+
+            <li class="collapse-item">
+              <a href="tertimonial.html">Testimonial</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact">
+          <a href="contact.html">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hamburger">
+        <button
+          style="background-color: transparent; border: none; cursor: pointer"
+          onclick="openHamburger()"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hamburgers -->
+
+    <div class="hamburger-list" id="hamburger-list">
+      <div>
+        <div>
+          <a href="./task2.html">Home</a>
+        </div>
+        <div>
+          <a href="blog.html">My Project</a>
+        </div>
+        <div>
+          <a href="contact.html">Contact Me</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Body -->
+
+    <div>
+      <div class="container">
+        <h1>My Testimonial</h1>
+        <div class="container-rating">
+          <h2>Rating By Star</h2>
+          <div class="rating">
+            <button class="rating-btn">All</button>
+            <button class="rating-btn">
+              <i class="fa-solid fa-star">1 </i>
+            </button>
+            <button class="rating-btn">
+              2<i class="fa-solid fa-star"></i>
+            </button>
+            <button class="rating-btn">
+              3 <i class="fa-solid fa-star"></i>
+            </button>
+            <button class="rating-btn">
+              4 <i class="fa-solid fa-star"></i>
+            </button>
+            <button class="rating-btn">
+              5 <i class="fa-solid fa-star"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <section class="testimonials" id="testimonials">
+        <div class="testimonial">
+          <img
+            class="profile-testimonial"
+            src="https://images.unsplash.com/photo-1696246847440-bb0047ba93ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+            alt="profile"
+          />
+          <p class="quote">Jasa yang mantap!</p>
+          <p class="author">- Putri Maharani</p>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="./js/testimonial.js"></script>
+</html>

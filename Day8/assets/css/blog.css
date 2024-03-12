@@ -1,0 +1,313 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #abb2b9;
+  font-family: sans-serif;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #eaecee;
+  align-items: center;
+}
+
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.dashboard ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.dashboard img {
+  margin-right: 40px;
+  width: 60px;
+}
+
+.dashboard a {
+  color: black;
+  text-decoration: none;
+}
+
+.dashboard ul li {
+  list-style-type: none;
+  margin-right: 25px;
+  font-size: 20px;
+}
+
+.home a {
+  font-weight: bold;
+  color: black;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.contact a {
+  text-decoration: none;
+  background-color: black;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  margin: 30px;
+}
+
+/* Form */
+
+h1 {
+  text-align: center;
+}
+
+form {
+  width: 500px;
+  margin: 50px auto;
+}
+
+.date-container {
+  display: flex;
+}
+
+textarea {
+  resize: none;
+}
+
+.container-form {
+  width: 100%;
+}
+
+.top input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  margin-top: 5px;
+}
+
+.top-decor a {
+  text-decoration: none;
+}
+
+.top-decor h3 {
+  color: black;
+}
+
+.date-container input {
+  width: 160px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  margin-top: 5px;
+}
+
+.left-date {
+  width: 500px;
+  padding-top: 10px;
+  margin-right: 10px;
+}
+
+.right-date {
+  width: 500px;
+  padding-top: 10px;
+}
+
+.left-date input {
+  width: 90%;
+}
+
+.right-date input {
+  width: 100%;
+}
+
+.deskripsi {
+  padding-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  margin-top: 5px;
+}
+
+/* Form Check Box */
+
+.teknologi {
+  padding-top: 10px;
+}
+
+.checkbox-container {
+  margin: 10px;
+}
+
+.left-checkbox {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+}
+
+.right-checkbox {
+  display: flex;
+  margin-left: 30px;
+  justify-content: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* Form Upload */
+
+.upload-image {
+  margin-top: 20px;
+}
+
+.image-file {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: white;
+  margin-top: 5px;
+}
+
+.image-file span {
+  background-color: #abb2b9;
+}
+
+.image-file input {
+  margin-left: 150px;
+}
+
+.submit-main button {
+  background-color: black;
+  padding: 5px 25px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-main {
+  display: flex;
+  justify-content: end;
+  width: 500px;
+  margin-top: 50px;
+}
+
+/* Halaman Blog List */
+
+.container-blog {
+  background-color: white;
+  width: 100%;
+}
+
+#contents {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* blog list */
+
+.blog-detail {
+  background-color: lightgray;
+  width: 430px;
+  border: 2px 2px 40px 2px black;
+  border-radius: 10px;
+  box-shadow: 2px;
+  margin: 20px;
+  display: flex;
+}
+
+.detail {
+  margin: 20px;
+}
+
+.detail img {
+  width: 380px;
+  border-radius: 10px;
+}
+
+.detail p {
+  text-align: justify;
+}
+
+.container-icon img {
+  margin-bottom: 20px;
+  width: 50px;
+}
+
+.button-blog {
+  width: 100%;
+}
+
+.button-blog .button-edit {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border: 2px 2px 40px 2px black;
+  border-radius: 10px;
+  width: 190px;
+  padding: 5px;
+}
+
+.button-blog .button-delete {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border: 2px 2px 40px 2px black;
+  border-radius: 10px;
+  width: 190px;
+  padding: 5px;
+}
+
+/* hamburger */
+
+.hamburger {
+  display: none;
+}
+
+.hamburger-list {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.hamburger-list a {
+  display: flex;
+  background-color: grey;
+  text-decoration: none;
+  color: black;
+  justify-content: center;
+  padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .collapse-item {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .contact {
+    display: none;
+  }
+
+  .hamburger-list {
+    display: block;
+  }
+}

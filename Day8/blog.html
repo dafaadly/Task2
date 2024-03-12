@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/blog.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav>
+      <div class="nav-main">
+        <div class="dashboard">
+          <ul>
+            <a href="web.html">
+              <img src="./assets/images/logo.png" alt="logo-image" />
+            </a>
+
+            <li class="collapse-item">
+              <a href="./task2.html">Home</a>
+            </li>
+            <li class="collapse-item">
+              <a href="blog.html">My Project</a>
+            </li>
+
+            <li class="collapse-item">
+              <a href="tertimonial.html">Testimonial</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact">
+          <a href="contact.html">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hamburger">
+        <button
+          style="background-color: transparent; border: none; cursor: pointer"
+          onclick="openHamburger()"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="hamburger-list" id="hamburger-list">
+      <div>
+        <div>
+          <a href="./task2.html">Home</a>
+        </div>
+        <div>
+          <a href="blog.html">My Project</a>
+        </div>
+        <div>
+          <a href="contact.html">Contact Me</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Project -->
+
+    <div>
+      <h1>ADD MY PROJECT</h1>
+
+      <div>
+        <form onsubmit="addBlog(event)" action="">
+          <div class="top">
+            <label for=""> Project Name </label>
+            <input type="text" id="project-name" />
+          </div>
+
+          <div class="date-container">
+            <div class="left-date">
+              <label for=""> Start Date </label>
+              <input type="date" id="start-date" />
+            </div>
+
+            <div class="right-date">
+              <label for=""> End Date </label>
+              <input type="date" id="end-date" />
+            </div>
+          </div>
+
+          <div class="deskripsi">
+            <label for=""> Description </label>
+            <textarea name="" id="deskripsi" cols="30" rows="10"></textarea>
+          </div>
+
+          <div class="teknologi">
+            <label for=""> Technologies </label>
+
+            <div class="checkbox-container">
+              <div class="left-checkbox">
+                <div>
+                  <label for="">
+                    <input type="checkbox" id="node-js" />
+                    Node Js</label
+                  >
+                  <label for="">
+                    <input type="checkbox" id="vue-js" /> Vue Js</label
+                  >
+                </div>
+              </div>
+
+              <div class="right-checkbox">
+                <div>
+                  <label for="">
+                    <input type="checkbox" id="react-js" />
+                    React Js</label
+                  >
+                  <label for="">
+                    <input type="checkbox" id="type-script" /> TypeScript</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="upload-image">
+            <label for="">Upload Image</label>
+
+            <div class="image-file">
+              <span> choose</span>
+
+              <input type="file" id="image-upload" />
+            </div>
+          </div>
+
+          <div class="submit-main">
+            <button>Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- blog -->
+
+      <div class="container-blog">
+        <h1>My Project</h1>
+
+        <div id="contents">
+          <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAv5JREFUSEvFllmoT1EUxn8XmTKLzC9KUTJGRKSQkgwhSVeGZJ7niCJDiXghQ0ny4oG8iWQoHkQpDxIlU5nJLMP6tI6245z/3eff1d11Op3O3vtb4/etCmpoVdQQLuUCNwQmAj+Bk8DHog4UBdb+acA2oJ2DPQHWAsfckCgbigAPAPYBfYD3wEagrr8VgevAIuBqDHIMcAdgJzAF+A4ctPcG4IUDtAa2A9P9+4QZtgJ4WsqAUsDyYpU/DYCLwHzL7e2cC3sAB4D+nnMZuwP4nLU/D3iqeyFv7wHLgdMxIQQme4Q6AQ+B1YCi8NfKAt4DLAbeAZs9r98iQZNt9YGVXnSK1m67b1l4Rxq4nh34AFz2dknyWBD3z/a2wClAaWgCfE3+pIGbW2W+AnZ5gYSAS4CxwBiPxmCv4t5WcO0BtZXyf9jBkrP7rdDmAC0skq/LAT5kOZtpF3f05xJQB7ji1V4b6Gu1oTDPBrRfKwq4mVuV5XEILMKYB4xLedcVuAncBbqngBXNN3kexwKrUhcAc4GjVrmfgpxMArrZ96YiwKVyHHrc0vu6qYf5gXup1lPoxd9JJ0SFOhb4EaDoVAIqrs5AF6CVe3keGGF0+qO6czzLKPROBjG0AY4Ao4BhwIUAuFpyfMtDrFw+TzW5hET5Hw6ciwWODfVC5/Bn3rcJMQw1L4dYr98ABhpzfanuUD8Gljovq3druddSLxHIOuBlkaqWvmqaUGVOCA7rjrCqVVzJEs2qZ3XufkqNEsrsaWzYuBRl6rK9BqhQit5kuaRObKRC6WfKI7nMlLrAGO2XJuu8ROIfQsqTxfFGh1sAMZF6U2Cy/qxNGCOrUAxJqkYjUatSIpWKksWQ1UYDMkLCIMVS377NAe7l0RrkTKapRMNAoUEgzylVqmYu9arkU0u9uxWY4d/H3cuyR580uEJ9xoHVu0pFI6PG9Z4KDXuqjWtVpOL375hhL7wna7xVHtcA8lRzdtQqCpxcqmKT5gpIbfbfB/oob2I2letxzN0l9/wC+q28H6my3A0AAAAASUVORK5CYII="/>
+                
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA1dJREFUSEvNlmmoTWEYhZ9rTBkyhH9IkqFkyJgkFCLJlCEyZgpFyPSDMqfMY4bMU8ZMfyghMv0givhlzBgSmb51W7u2fc9x2Ffd+9Xp3Hv2u9/1futd7/q+PIpo5RURLsUaeCawAHgBnAPWAjcSTLUCxgOdgerAbGDpn9jMteNOwAFAiX8CE0MB44DlwLxQUElgMTABWBNA1/m3q0Av4GI28FzA6wPYK2BuLEF94GDY4UugdCiiPNAPeBSLWQb5bZyWFlgAh4F9iQSVgOdh1z+AmsCHxPNRQDtgeFrgvcApYGciwXagClAKeAoIKL5EfZPwbExa4PlOPiuWYLp30gwoAdx2f1fGYvS3ClqSFniAhSQ11wMaA5WzJHsTen0XeAB0teCO/itwX2Ak0MKUajTOA5uARcDGRMKxVvtUoItF9Ra45ncKFJBUdS2LqQKwEFCPJTB9JKghQBuD1vH3YytYIBuAb2HOe4adD/ZHPiAP0Gb0nb/iwALTy9rNKitWMb09vw2d8HqgWz2c5ByKnRzMpa2LfuiiT/u5Zl266A+0Br4kgYcCPRwQZ1Kz+j5QeMk0NgrV30lQrd6rvxfcHrHzPRFzzNNxKAksGrW7PokXygDvgMu2xKbAzUSMFH7LOmhpXeTvLLaOuGV7MlEtq9tsKmUOWiOAYUDzkLiDfVovD/Rz6WCQaTwB3Ae2AttiVMvB1HPp41MSWP/XBqRAGYNmcH+g7mT4XYahMdLL6qVWe3/Lj6UV6WN36LfUrKLk1YqXB8jl1GPNdv7K5NX6TUGyO1FY1UWc9YmzxazEadThIbeSyHSwaIevg2YkRDEomn9buQ4JjYVG5IwNRMKSVWZaApLApGoZyGjbbcbgXMBzfL5Go6MkGg31VL2XDnb4syKGsDoAP/GRmQp4l8/UpFPJUMr6WJTiI6FFIKJdYlRxqYB1CVB/pNz4ktnoPNaqFik1FqApUK/lDamA5c0ajziN2qmuP3Wt/nt2tq8xBLVIBU1JC6xeqqeav88eER0YuhxEtxKNXXfHafTK2WBmhKk4nhY4muduVvMzX+quJBJ29JmsFnw0oOY3MqEC+LlUHb1QI9Bd0WftnzbRwHe0qP/ZYov3vTpr1YV58LdUFwYj1Tj9d8Ao4S/uUqwfrU3dbgAAAABJRU5ErkJggg=="/>
+                
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAnNJREFUSEvtlk2Ij1EUxn/DSCkLi1nYMA1NkSZlwYKFGrNAU5pEUsZHSdn4VrKYWPhIWUlTPhKSZIONmZo0FmIh8p2Z7C0slAWK++heHaf3nfu+/v+aBaem5j33nOe597nnnPtvYZKsZZJ4+beJlwEnnPSbgYNAl/EfBUZd3ArgmPE9B04BV12csB7L56V+BCw1wbeAs8BD43sFLAJ+RJ8wXgALTcxyYA/QZ3wi/I3tiRcDT90uu4EdwEbj3wWcj9/6/5xZuw5cBIYdjrCfJV9RcV0C+k3SOLASeB3kmxH9n4C5QCswBsyK/i/AAmAE6DAY2sh2u5Ei4rZA/MGQKP5QTDppknUFIt5tfAfCXU91tfIZmAd8zBFrXQAqjmTpJENAZ3R+B6bEP7neAj1OGfn3A2ec7KV9PA1QEc03CTeBwYK7SyGqhZ3AepOja5D036oSK24NcNclqFr3hSJZ5/yqfhWbL6hVZRvNTa77gJKTvQl9uDrKOT1TUPeAtf6k6TtHLKkluaRPpvtXdQ9Ex5Eopa0JSSuJJXWh5YiVpMLY6wpNw0LTSwS+1RR6Ok68Mt5Kj8TMuHO1WbIbobo1KL4CW4P0G8ya2kbtozZqiFjJ24ALBYUmlx2n+tZGLk9EqrUqUqe4J8ASA/gy9rDuMtkf87gZJxaGBrwekYlMMb9en5xVPXHCuQZsKgG9AmzJEab1usSzgfdujgtLI7Xdz+NmSZ1w1LfHHehhwD4g2YPXPbEANbHehTd3TkQvncfNPrHwNKtvR+DeUO13skd0AX9z4gTxIA4QO8sr8zdCrN9dmlySvbY1QlybzCb8J25IvjrJPwGpvmYfQc0G8QAAAABJRU5ErkJggg=="/>
+
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAaVJREFUSEvt1z9rVEEUBfBfVFBBiY2YCKYwYARBLNIqsUslCAaLIGmSKggWVn4CESz8Atb+iYG0gRAVOxXsLCQgigpCCokgkgR9V+bB+Nhddtd9JsUOvGJm7pzDPXPmzrwBO9QGdojXriM+gdEeqbGGj1WsRhkv4nKPSEuYBUzlmFXiYXzuMWnA/cJRrJfYVeIJrNZAHJAX8bRPXCrQl7qXPuub6y81G5nrJ2630Pw45rCJW3iVxZ7FvdTvWOpvONKCeBwvcAnLlbhD2OiWeDsBx/o3uIG9WEmAh/Eh1fcYj8p3Ps09xNVuifMknhVlL7ZjX5K2nHuCK9iD1zjXQKGOpW6H+DtOF3v9qfDDAcwUF8J1nMkW10Ic+O+KbxovE1lcQHdws06pc1VC6tnkhxh/m9SoJeMfOJixf0Ecs2iP0/7XQhzmeoBriWwJ95PZIuNT/3ofN3N1HK1JbGVZ78ddzLezx0MImZq1KCZxlsM4FypBse453mMsZTiYxRzD17L/vx57j7JC8oe72bt6BCdbZN7JVNvP205Au47ddX8SXWfS7sLfsCZpH6gOb98AAAAASUVORK5CYII="/> -->
+
+          <!-- dynamic content would be here -->
+
+          <!-- <div class="blog-detail">
+            <div class="detail">
+              <img src="./assets/images/photo.jpg" alt="" />
+              <div>
+                <div>
+                  <h3>Dumbways Mobile App - 2021</h3>
+                  <p>durasi: 3 bulan</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempore quibusdam nesciunt, itaque quas minus perferendis
+                    illum aliquam autem enim rerum, laudantium porro.
+                    Necessitatibus porro dolorum itaque velit distinctio?
+                    Fugiat, quaerat.
+                  </p>
+                </div>
+
+                <div class="container-icon">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAhxJREFUSEvN18nrTnEUx/HXL2NkYaH8CTYKSxnKELKwsZQkMi2UIaKUWNmRMpSNoSxExsw7C1lQEiFLK1NCxrhH5+rp6RnuM/z8fndzn3u/33ve55zv+Zzv9xkwRNfAEHENO/AIzMQbPB2MrDSLeDQuYnHet+BVPx1oBj6MrbiAJfiJeLcXH/rhQDPwb5zFKlzDvIS9TfiRdKZrH1qBw2jAV+NKDTzeP8M2XO2W3A7cCh5jd7AZTzp1oAq4HfwXTmB3qqCSD1XBYewkNuB6EensBtY/YTuOViF3Ag57Z7AuC25OHeAj5iMyECp43MqBTsFl2tdk5LPSeEQ7t6j4sHcXE1L/e5o50A04WKewMSOfjgUYm1U+vi7S4zk3MvHv6hZcpn19IbkpmITzCW+U4ZXpbF/AnzEDz4u+fhMLW6zpiqyPnsGxpgGajOVZcJfqmkwJOYZNWXQ9gb8kYCIuY2SmcW0+l5GH7HbhYaNMdLrGAV1UU7WjaoweTB0fwLkiI/f6JadvCY0tM3p0LTQYMR6N5UE/G8jXwuDSNBjQkE55xU52Gjvxugo05lRJdQn9jlt10PsIST2qCizntQMHLA4Ccb+BcfnhS+xI7XbK/Du/FThgy4pt7322wYDG7315GvnRFTE/agaO6g19xokj0hvQQ4V09uNdL8B2qZ6KMbid4NDji34A24FjfFpK5L8eb/sZXENbw+6fxKBH/AcSDn0fjUWmoQAAAABJRU5ErkJggg=="
+                  />
+
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAoRJREFUSEvF1lmIzmEUx/HPWCJl38vuQtlK1iKylAslN3JHyq2tFFEiRaJcKMKFC0mhXClFIYm4QITsS9mX7LI/p55XY2Z4l5kxT/2bmv//Pd/n/M55fuep0kSrqom4GgrcA0/KSaKhwAuwF59KhTcUeA124tH/BLfAMUzGz/8FDuhuXMLmUqHxXX2kboVD+I6ZOduI1w1Pi22iUvBAHMRpLEYzzMAznMWPxgCPw1FsSYDVmIIlWIj7xYCF9+VmHN/fxfEEmY85WI9RKfPXpUIrqfFInEOXDLqCPdhYDrQScFu8QJvcVJH9DUxvbHDE35abKpxqA1ZgEbaWAy+3xhG7cIzm4i2u4z2GNzY44nfAbOzCKnRM8GUNDQ5VJiJc6kKS9VUGtEzQr5iWuzyMpLDGYiqap2ddXRsqJnXnbAif0+RZjnt5/IXEXdE9nef2WeZ3uIqL+JJhYShD8LwmvBg4vh+RpR2fsy7EiGzv4BbiWNUciYPS4DiJfqkBY+N/rFLA8YOQdSk21TGBotkieNjkzRw9jt3+7GznK5G68JswjDO5o1vnuRty9kenDAyJwzbj/2NSjU/VlWmllhmZh/RhIHGE4roTz7dyOrpc55qUfHoe9uVuLrCiyfpkaR+WuoFiNY76jcblXOehaYavTTeOCXkUBiduHSdSh29PHXygvuCQMgK1SzVbmabQtVIDVvtuVtr04Rrq/H79t4zjKOzIjvQGtzM8/r6ssYmoe0jdCwPwIQ+OI1mN6PRaF4NiUhcYfdE7X2vCVOKJ7o71EQ/ymQ5j6ZluJ1GSKEFcAsPLa61SwfHdsNRAg7P8kXX1zAtn+XE2kzCWf65SwcXilP2+ycC/AHTAeh8+m2N7AAAAAElFTkSuQmCC"
+                  />
+                </div>
+
+                <div class="button-blog">
+                  <button class="button-edit">Edit</button>
+                  <button class="button-delete">Delete</button>
+                </div>
+
+
+              </div>
+
+            </div>
+
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/blog.js"></script>
+    <script src="./js/hamburger.js"></script>
+  </body>
+</html>
